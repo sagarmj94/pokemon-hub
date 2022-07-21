@@ -9,7 +9,7 @@ const PokemonDetails = ({ data }) => {
 				""
 			) : (
 				<>
-					<h2>{data.name}</h2>
+					<h2 style={{ color: "#fff" }}>{data.name}</h2>
 					<img
 						src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
 						alt=''
@@ -18,14 +18,14 @@ const PokemonDetails = ({ data }) => {
 						{data.abilities.map((poke) => {
 							return (
 								<>
-									<div className='group'>
+									<div className='group' style={{ background: "#fff" }}>
 										<h2>{poke.ability.name}</h2>
 									</div>
 								</>
 							)
 						})}
 					</div>
-					<div className='base-stat'>
+					<div className='base-stat' style={{ color: "#fff" }}>
 						{data.stats.map((poke) => {
 							return (
 								<>

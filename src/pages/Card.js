@@ -1,11 +1,21 @@
 /** @format */
 
 import React from "react"
+import ReactLoading from "react-loading"
 const Card = ({ pokemon, loading, infoPokemon }) => {
 	return (
 		<>
 			{loading ? (
-				<h1>Loading...</h1>
+				<h1>
+					<div>
+						<ReactLoading
+							type={"spin"}
+							color={"#fff"}
+							height={"20%"}
+							width={"20%"}
+						/>
+					</div>
+				</h1>
 			) : (
 				pokemon.map((item) => {
 					return (
